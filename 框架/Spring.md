@@ -2,23 +2,23 @@
 
 - [Spring](#Spring)  
   - [Spring的重要模块](#Spring的重要模块)
-  - [Spring IOC](#Spring IOC)
-    - [Spring IOC的意义](#Spring IOC的意义)  
-    - [Spring IOC的实现流程](#Spring IOC的实现流程)
+  - [Spring IOC](#Spring-IOC)
+    - [Spring IOC的意义](#Spring-IOC的意义)  
+    - [Spring IOC的实现流程](#Spring-IOC的实现流程)
   - [Spring的核心接口](#Spring的核心接口)
-  - [Spring 框架中的设计模式](#Spring 框架中都用到了哪些设计模式)
-  - [Spring Bean](#Spring Bean)
-    - [Spring bean的作用域 ](#Spring bean的作用域 )  
+  - [Spring 框架中的设计模式](#Spring框架中都用到了哪些设计模式)
+  - [Spring Bean](#Spring-Bean)
+    - [Spring bean的作用域 ](#Spring-bean的作用域 )  
     - [Spring框架中的单例bean是线程安全的吗](#Spring框架中的单例bean是线程安全的吗)  
     - [bean的生命周期](#bean的生命周期)
-  - [@Autowired 和@Resource](#@Autowired 和@Resource)
+  - [@Autowired 和@Resource](#@Autowired和@Resource)
   - [循环依赖怎么解决 ](#循环依赖怎么解决 )
     - [3级缓存 ](#3级缓存的作用，为什么不直接使用二级缓存呢？ )  
     - [为什么二三级都是hashmap，一级是concurrenthashmap？](#为什么二三级都是hashmap，一级是concurrenthashmap？)  
-  - [spring aop ](#spring aop)
+  - [spring aop ](#spring-aop)
     - [AOP代理 ](#AOP代理 )  
     - [动态代理的几种方式](#动态代理的几种方式)  
-  - [spring 事务](#spring 事务)
+  - [spring 事务](#spring事务)
   - [mvc框架](#mvc框架)
 
 ## Spring的重要模块
@@ -33,13 +33,13 @@
 
 
 
-## Spring IOC
+## Spring-IOC
 
-### Spring IOC的意义
+### Spring-IOC的意义
 
 将对象的创建和管理交给IOC容器，由Spring负责创建、管理、装配对象，并且管理这些对象的整个生命周期。
 
-### Spring IOC的实现流程
+### Spring-IOC的实现流程
 
 | 步骤       | 解释                                                         |
 | ---------- | ------------------------------------------------------------ |
@@ -55,7 +55,7 @@ BeanFactory和ApplicationContext是Spring的两大核心接口，都可以当做
 
 
 
-## Spring 框架中都用到了哪些设计模式
+## Spring框架中都用到了哪些设计模式
 
 | 设计模式 | 解释                                                    |
 | -------- | ------------------------------------------------------- |
@@ -63,9 +63,9 @@ BeanFactory和ApplicationContext是Spring的两大核心接口，都可以当做
 | 单例模式 | Bean默认为单例模式                                      |
 | 代理模式 | Spring的AOP功能用到了JDK的动态代理和CGLIB字节码生成技术 |
 
-##  Spring Bean
+##  Spring-Bean
 
-### Spring bean的作用域
+### Spring-bean的作用域
 
 Spring框架支持以下五种bean的作用域：
 
@@ -95,7 +95,7 @@ bean 标签有两个重要的属性（init-method和destroy-method）。用它�
 
 ![image-20240407150640507](/Users/fshan/Desktop/git/image/框架/bean周期.png)
 
-## @Autowired 和@Resource
+## @Autowired和@Resource
 
 Autowired的装配过程，和Resource的区别
 
@@ -136,7 +136,7 @@ singletonFactories 缓存：三级缓存，也称为“单例工厂池”，用�
 | 一级     | 一级缓存SingletonObjects使用ConcurrentHashMap是因为它需要处理并发操作。  在Spring容器运行过程中，可能会有多个线程同时从容器中获取Bean，这就需要一级缓存具备线程安全的特性。 |
 | 二三级   | 二级缓存EarlySingletonObjects和三级缓存SingletonFactories使用HashMap  是因为它们主要在Bean的创建过程中使用，这个过程是单线程的。 |
 
-## spring aop
+## spring-aop
 
 基础的比如，spring aop的切面、切点、通知、连接点等概念，通知类型等，需要有一定了解
 
@@ -162,7 +162,7 @@ singletonFactories 缓存：三级缓存，也称为“单例工厂池”，用�
 
  
 
-## spring 事务
+## spring事务
 
 声明式事务、编程式事务
 
